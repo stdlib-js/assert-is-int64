@@ -35,32 +35,14 @@ limitations under the License.
 
 > Test if a value is a [64-bit signed integer][@stdlib/number/int64/ctor].
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/assert-is-int64
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var isInt64 = require( '@stdlib/assert-is-int64' );
+import isInt64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-int64@esm/index.mjs';
 ```
 
 #### isInt64( value )
@@ -68,7 +50,7 @@ var isInt64 = require( '@stdlib/assert-is-int64' );
 Tests if a value is a [64-bit signed integer][@stdlib/number/int64/ctor].
 
 ```javascript
-var Int64 = require( '@stdlib/number-int64-ctor' );
+import Int64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-int64-ctor@esm/index.mjs';
 
 var x = new Int64( 1234 );
 
@@ -86,10 +68,15 @@ var bool = isInt64( x );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var Int64 = require( '@stdlib/number-int64-ctor' );
-var isInt64 = require( '@stdlib/assert-is-int64' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
+import Int64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-int64-ctor@esm/index.mjs';
+import isInt64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-int64@esm/index.mjs';
 
 console.log( isInt64( new Int64( 1234 ) ) );
 // => true
@@ -102,6 +89,10 @@ console.log( isInt64( {} ) );
 
 console.log( isInt64( null ) );
 // => false
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -125,7 +116,7 @@ console.log( isInt64( null ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -188,7 +179,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/assert-is-int64/main/LICENSE
 
-[@stdlib/number/int64/ctor]: https://github.com/stdlib-js/number-int64-ctor
+[@stdlib/number/int64/ctor]: https://github.com/stdlib-js/number-int64-ctor/tree/esm
 
 <!-- <related-links> -->
 
