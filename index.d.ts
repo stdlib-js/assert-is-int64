@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,20 +16,29 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var Int64 = require( '@stdlib/number-int64-ctor' );
-var isInt64 = require( './../lib' );
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-console.log( isInt64( new Int64( 1234 ) ) );
-// => true
+import { Int64 } from '@stdlib/types/number';
 
-console.log( isInt64( new Complex128( 3.0, 1.0 ) ) );
-// => false
+/**
+* Tests if a value is a 64-bit signed integer.
+*
+* @param value - value to test
+* @returns boolean indicating if a value is a 64-bit signed integer
+*
+* @example
+* var Int64 = require( '@stdlib/number-int64-ctor' );
+*
+* var x = new Int64( 1234 );
+*
+* var bool = isInt64( x );
+* // returns true
+*/
+declare function isInt64( value: any ): value is Int64;
 
-console.log( isInt64( {} ) );
-// => false
 
-console.log( isInt64( null ) );
-// => false
+// EXPORTS //
+
+export = isInt64;
